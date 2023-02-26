@@ -22,6 +22,7 @@ function AddPostWrapper(){
       const onSubmit = (data) => {
         data["priceMin"]=data["priceRange"][0]
         data["priceMax"] = data["priceRange"][1]
+        data["picturePath"] = ""
         console.log(data)
       }
             return(
