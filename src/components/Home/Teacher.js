@@ -2,11 +2,12 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 
-function Teacher(){
+function Teacher({data}){
 
     return(
         <>
-            <p>Teachers page123</p>
+            <p>{data.firstName}</p>
+            <p>{data.lastName}</p>
 
         </>
     )
