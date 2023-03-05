@@ -2,17 +2,11 @@ import React, { Component } from 'react';
 import Teacher from './Teacher'
 import { getEnv } from "./../../env"
 
+import Grid from '@mui/material/Grid';
+
+
 const baseUrl = getEnv()["API_BASE_URL"] + "api/post"
-//const baseUrl = "https://opetajateapp.azurewebsites.net/api/post"
 
-// async function loadData(){
-//   const response = await fetch(baseUrl);
-
-//   const posts = await response.json();
-//   console.log(posts);
-// }
-
-// loadData();
 export function Home() {
   const [posts, setPosts] = React.useState([])
   React.useEffect(() => {
@@ -24,11 +18,13 @@ export function Home() {
   }, [])
 //
   return (
-      <>
+      <Grid container spacing ={1} justifyContent="center">
+        <Grid item xs={12} md={8} lg={6}>
           {posts.map((item,id) => 
           <Teacher key={item.id} data = {item}/>)
           }      
-      </>
+        </Grid>
+      </Grid>
   )
 }
 
