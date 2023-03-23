@@ -20,4 +20,5 @@ function Teacher({data}){
     )
 }
 
+
 export default Teacher
